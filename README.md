@@ -5,8 +5,11 @@
 ## Hola2
 
 * Two kinds of API Rest
-  * Open Library
-  * Spring Boot: books
+  * Open Library: bookList
+  * Spring Boot: books, 
+- Gallery
+- GenerateRmail js function
+- TriggerAPI: button
 
 ## Hola3
 
