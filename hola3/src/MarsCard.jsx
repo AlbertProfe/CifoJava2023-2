@@ -2,8 +2,11 @@ import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 
 
-const MarsCard = () => (
-  <Card >
+const MarsCard = () => {
+
+return (
+<>    
+  <Card  style={{ margin: "10px"}}>
     <Image
       src="https://images-assets.nasa.gov/image/NHQ201905310035/NHQ201905310035~thumb.jpg"
       wrapped
@@ -31,6 +34,8 @@ const MarsCard = () => (
       </a>
     </Card.Content>
   </Card>
-);
+</>
+)
+};
 
 export default MarsCard;
