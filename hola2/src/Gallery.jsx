@@ -8,19 +8,20 @@ export default function Gallery() {
     { id: 2, name: 'Item 2' },
     { id: 3, name: 'Item 3' }
   ];
+  const a = 3;
 
   const email = generateEmail('Marc');
 
 
   return (
     <>
-     <h1>Sandbox</h1>
+     <h2>Sandbox data</h2>
       <p>{maqueda} Fine thanks </p>
       <p><strong>email: </strong> {email}  </p>
 
       <h2>Items</h2>
        {items.map(item => (
-        <div key={item.id}>{item.name}</div>
+        <div >{item.name}</div>
       ))}
       
       <h2>Amazing scientists</h2>

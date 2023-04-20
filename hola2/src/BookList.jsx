@@ -21,7 +21,7 @@ const BookList = () => {
 
   return (
     <>
-    <h1>Books</h1>
+    <h3>Books</h3>
       {isLoading ? (
         <p>Loading...</p>
       ) : (

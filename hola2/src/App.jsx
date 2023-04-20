@@ -3,20 +3,34 @@ import BookList from './BookList';
 import Gallery from './Gallery';
 import TriggerAPI from './TriggerAPI';
 
+
 export default function App() {
 
   return (
     <>
-      <div style={{ width: "450px", display: "inline-block" }}>
+      <h1>Hola2, React jsx and components</h1>
+      <div
+        style={{
+          width: "550px",
+          display: "inline-block",
+          verticalAlign: "top",
+        }}
+      >
         <Gallery />
         <BookList />
       </div>
-      
-      <div style={{ width: "250px", display: "inline-block" }}>
-        {" "}
-        App
+
+      <div
+        style={{
+          width: "550px",
+          display: "inline-block",
+          verticalAlign: "top",
+        }}
+      >
         <TriggerAPI />
       </div>
+
+     
     </>
   );
 }

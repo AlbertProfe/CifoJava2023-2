@@ -14,15 +14,16 @@ function TriggerAPI() {
   };
 
   return (
-    <div>
+    <>
+      <h2>Trigger button</h2>
       <button onClick={handleButtonClick}>Get Data</button>
       {responseData && (
         <div>
-          <h2>Response Data:</h2>
+          <h3>Response Data:</h3>
           <pre>{JSON.stringify(responseData, null, 2)}</pre>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
