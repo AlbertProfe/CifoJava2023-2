@@ -215,7 +215,7 @@ function App() {
           </Grid.Column>
         ))}
       </Grid>
-      
+
     </>
   );
 };
