@@ -7,15 +7,17 @@ export default function Layout() {
     <>
       <nav>
         <Link to="/">Home</Link>
-        <span> </span>
+        <span>|</span>
         <Link to="/people">People</Link>
-        <span> </span>
+        <span>|</span>
         <Link to="/contact">Contact</Link>
-        <span> </span>
-      
+        <span>|</span>
+        <Link to="/personProfile">Person Profile</Link>
+        <span>|</span>
       </nav>
 
       <Outlet />
+
       <Footer />
     </>
   );

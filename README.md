@@ -24,3 +24,11 @@
 - Semantic import: Card, Image, Grid
 - using spread operator to pass props to PersonCard
 - using map to send all person from array People
+
+
+
+## Hola5
+
+- [Lab#RE02-1](https://albertprofe.dev/reactjs/rjslab2.html): project Hola5
+
+

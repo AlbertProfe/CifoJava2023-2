@@ -1,5 +1,8 @@
+
+
 const Footer = () => {
-  return <p>Footer</p>;
+  return <p>Cifo Java 2023: Java Spring Boot & React JS </p>;
 };
+
 
 export default Footer;
