@@ -45,9 +45,15 @@ export default function PersonProfile() {
 
   return (
     <>
-      <h1> Person Profile form</h1>
-      <hr />
-      <br />
+      <h1 style={{ padding: "20px", backgroundColor: "#E8E8E8" }}>
+        Person Profile form
+      </h1>
+      {/* Grid semantic component calling PersonCard component from map and spread operator
+       https://react.semantic-ui.com/collections/grid/ */}
+     
+      <div    
+        style={{ padding: "20px", backgroundColor: "#F0F0F0" }}
+      >
       <h3> Modify data</h3>
       <label>Name</label>
       <input
@@ -87,6 +93,7 @@ export default function PersonProfile() {
       <p>
         <strong>Age:</strong> {person.age}
       </p>
+      </div>
     </>
   );
 }

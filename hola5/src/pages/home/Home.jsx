@@ -4,7 +4,11 @@ export default function Layout() {
 
   return (
     <>
-      <h1>Home</h1>
+      <h1 style={{ padding: "20px", backgroundColor: "#E8E8E8" }}>Home</h1>
+      {/* Grid semantic component calling PersonCard component from map and spread operator
+       https://react.semantic-ui.com/collections/grid/ */}
+      <div style={{ padding: "20px", backgroundColor: "#F0F0F0" }}>
+      
       <h2>
         New site, new domain, new homepage First, a little bit of housekeeping.
       </h2>{" "}
@@ -27,6 +31,7 @@ export default function Layout() {
         prominently mention modern React-based frameworks. If you haven’t seen
         the new homepage yet, check it out!
       </p>
+      </div>
     </>
   );
 };
