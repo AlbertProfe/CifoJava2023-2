@@ -14,6 +14,8 @@ export default function Layout() {
         <span>|</span>
         <Link to="/personProfile">Person Profile</Link>
         <span>|</span>
+        <Link to="/clock">Clock</Link>
+        <span>|</span>
       </nav>
 
       <Outlet />
