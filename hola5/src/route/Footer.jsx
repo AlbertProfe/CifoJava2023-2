@@ -2,18 +2,22 @@
 
 const Footer = () => {
   return (
-  <>
-    <div style={{position: "absolute",
-    right: 0,
-    bottom: 0,
-    left: 0,
-    padding: "1rem"}}>
-  
-      <p>CIFO La Violeta Java 2023: Java Spring Boot & React JS </p>;
-    </div> 
-  </>
-
-)};
+    <>
+      <br/>
+      <div
+        style={{
+          position: "relative",
+          right: 0,
+          bottom: 0,
+          left: 0,
+          padding: "1rem",
+          backgroundColor: "#D0D0DF",
+        }}
+      >
+        <span>CIFO La Violeta Java 2023: Java Spring Boot & React JS </span>
+      </div>
+    </>
+  );};
 
 
 export default Footer;

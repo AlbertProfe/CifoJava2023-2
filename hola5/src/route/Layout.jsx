@@ -5,17 +5,17 @@ import Footer from "./Footer";
 export default function Layout() {
   return (
     <>
-      <nav>
+      <nav style={{ backgroundColor: "#A0D0DF", padding: "20px" }}>
         <Link to="/">Home</Link>
-        <span>|</span>
+        <span>{"  |  "}</span>
         <Link to="/people">People</Link>
-        <span>|</span>
+        <span>{"  |  "}</span>
         <Link to="/contact">Contact</Link>
-        <span>|</span>
+        <span>{"  |  "}</span>
         <Link to="/personProfile">Person Profile</Link>
-        <span>|</span>
+        <span>{"  |  "}</span>
         <Link to="/clock">Clock</Link>
-        <span>|</span>
+        <span>{"  |  "}</span>
       </nav>
 
       <Outlet />

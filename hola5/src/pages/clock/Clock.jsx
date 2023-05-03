@@ -39,9 +39,11 @@ const Clock = () => {
   // https://www.w3schools.com/colors/colors_shades.asp
   return (
     <>
-      <h1 style={{ padding: "20px", backgroundColor: "#E8E8E8" }}> </h1>
+      <h1 style={{ padding: "20px", backgroundColor: "#E8E8E8" }}>
+        Clock manager{" "}
+      </h1>
       <div style={{ backgroundColor: "#D0D0D0", padding: "12px" }}>
-        <h3>Clock manager</h3>
+        <br />
         <div
           style={{
             backgroundColor: "#F0F0F0",
