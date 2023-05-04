@@ -18,7 +18,12 @@ export default function ApiRest() {
 
   return (
     <>
-      <h1> My data todos from axios</h1>
+    <h1 style={{ padding: "20px", backgroundColor: "#E8E8E8" }}>
+        My <strong>to-dos</strong> (from API Rest & axios){" "}
+      </h1>
+      <div style={{ backgroundColor: "#D0D0D0", padding: "12px" }}>
+        <br />
+      
       {data &&
         data.map((item) => {
           return (
@@ -31,6 +36,7 @@ export default function ApiRest() {
             </spam>
           );
         })}
+        </div>
     </>
   );
 }
