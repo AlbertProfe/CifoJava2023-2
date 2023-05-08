@@ -22,18 +22,22 @@ function reducer(state, action) {
 
 const Clock = () => {
 
-    const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
   const idRef = useRef(0);
 
   useEffect(() => {
+
     if (!state.isRunning) {
       return;
     }
+
     idRef.current = setInterval(() => dispatch({ type: "tick" }), 1000);
+
     return () => {
       clearInterval(idRef.current);
       idRef.current = 0;
     };
+
   }, [state.isRunning]);
 
   // https://www.w3schools.com/colors/colors_shades.asp

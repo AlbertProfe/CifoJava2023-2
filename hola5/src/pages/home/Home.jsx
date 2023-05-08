@@ -1,3 +1,4 @@
+import HooksTable from "./HooksTable";
 
 
 export default function Layout() {
@@ -27,11 +28,19 @@ export default function Layout() {
           old. In JavaScript years, it’s like a whole century!
         </p>
         <p>
-          We’ve refreshed the React homepage to reflect why we think React is a 
+          We’ve refreshed the React homepage to reflect why we think React is a
           great way to create user interfaces today, and updated the getting
-          started guides to more prominently mention modern React-based frameworks.
-          If you haven’t seen the new homepage yet, check it out!
+          started guides to more prominently mention modern React-based
+          frameworks. If you haven’t seen the new homepage yet, check it out!
         </p>
+        <br />
+        <a href="https://codesandbox.io/s/53j20o?module=/example.js&file=/example.js:0-1197">
+          Semantic React Table{" "}
+        </a>
+        <h3>Table Hooks</h3>
+        <div>
+          <HooksTable />
+        </div>
       </div>
     </>
   );

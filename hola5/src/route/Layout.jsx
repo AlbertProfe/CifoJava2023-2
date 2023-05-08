@@ -14,9 +14,11 @@ export default function Layout() {
         <span>{"  |  "}</span>
         <Link to="/clock">Clock</Link>
         <span>{"  |  "}</span>
-         <Link to="/apiRest">Api Rest</Link>
+        <Link to="/apiRest">Api Rest</Link>
         <span>{"  |  "}</span>
-         <Link to="/contact">Contact</Link>
+        <Link to="/login">Log in</Link>
+        <span>{"  |  "}</span>
+        <Link to="/contact">Contact</Link>
         <span>{"  |  "}</span>
       </nav>
 
