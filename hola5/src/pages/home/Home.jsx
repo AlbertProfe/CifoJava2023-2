@@ -1,5 +1,5 @@
 import HooksTable from "./HooksTable";
-
+import { Divider } from "semantic-ui-react";
 
 export default function Layout() {
 
@@ -34,10 +34,12 @@ export default function Layout() {
           frameworks. If you haven’t seen the new homepage yet, check it out!
         </p>
         <br />
+        <Divider />
+        <h3>Table Hooks</h3>
         <a href="https://codesandbox.io/s/53j20o?module=/example.js&file=/example.js:0-1197">
           Semantic React Table{" "}
-        </a>
-        <h3>Table Hooks</h3>
+        </a>{" "}
+        <br /> <br />
         <div>
           <HooksTable />
         </div>

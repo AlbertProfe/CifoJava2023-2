@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { Button } from "semantic-ui-react";
 
 function personOperations(state, action) {
   switch (action.type) {
@@ -50,49 +51,56 @@ export default function PersonProfile() {
       </h1>
       {/* Grid semantic component calling PersonCard component from map and spread operator
        https://react.semantic-ui.com/collections/grid/ */}
-     
-      <div    
-        style={{ padding: "20px", backgroundColor: "#F0F0F0" }}
-      >
-      <h3> Modify data</h3>
-      <label>Name</label>
-      <input
-        value={person.name}
-        onChange={(e) =>
-          trigger({
-            type: "changed_name",
-            nextName: e.target.value,
-          })
-        }
-      />
-      <label>Surame</label>
-      <input
-        value={person.surname}
-        onChange={(e) =>
-          trigger({
-            type: "changed_surname",
-            nextSurName: e.target.value,
-          })
-        }
-      />
-      <button onClick={() => trigger({ type: "incremented_age" })}>
-        {" "}
-        Increment age
-      </button>
-      <button onClick={() => trigger({ type: "decremented_age" })}>
-        Decrement age
-      </button>
-      <br /> <br /> <br />
-      <h3>Person Profile</h3>
-      <p>
-        <strong>Name:</strong> {person.name}
-      </p>
-      <p>
-        <strong>Surname:</strong> {person.surname}
-      </p>
-      <p>
-        <strong>Age:</strong> {person.age}
-      </p>
+
+      <div style={{ padding: "20px", backgroundColor: "#F0F0F0" }}>
+        <h3> Modify data</h3>
+        <label>Name</label>
+        <input
+          value={person.name}
+          onChange={(e) =>
+            trigger({
+              type: "changed_name",
+              nextName: e.target.value,
+            })
+          }
+        />
+        <label>Surame</label>
+        <input
+          value={person.surname}
+          onChange={(e) =>
+            trigger({
+              type: "changed_surname",
+              nextSurName: e.target.value,
+            })
+          }
+        />
+        <br/>
+
+
+        <Button primary onClick={() => trigger({ type: "incremented_age" })}>
+          Increment age
+        </Button>
+
+
+
+
+        
+        <Button secondary onClick={() => trigger({ type: "decremented_age" })}>
+          Decrement age
+        </Button>
+        
+        <br />
+        <br /> <br />
+        <h3>Person Profile</h3>
+        <p>
+          <strong>Name:</strong> {person.name}
+        </p>
+        <p>
+          <strong>Surname:</strong> {person.surname}
+        </p>
+        <p>
+          <strong>Age:</strong> {person.age}
+        </p>
       </div>
     </>
   );

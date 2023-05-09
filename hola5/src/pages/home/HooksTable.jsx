@@ -3,6 +3,7 @@ import { Table } from "semantic-ui-react";
 
 const HooksTable = () => (
   <Table singleLine>
+    
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>tab</Table.HeaderCell>
