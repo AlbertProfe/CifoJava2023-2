@@ -4,7 +4,7 @@ import { useReducer } from "react";
 const initialTodos = [
   {
     id: 1,
-    text: "lean how to comunicate",
+    text: "lean how to communicate",
     completed: true,
     author: "Faby",
     due: 1 / 5 / 2022
@@ -20,8 +20,17 @@ const initialTodos = [
 
 function reducer(state, action) {
   switch (action.type) {
-    case "bla": {
-      return;
+     case "add": {
+      return [
+        ...state,
+        {
+          id: Date.now(),
+          text: "",
+          author: "",
+          due: "",
+          completed: false
+        }
+      ];
     }
     case "blabla": {
       return;
@@ -33,16 +42,22 @@ function reducer(state, action) {
 
 
 export default function ToDoApp(){
-    const [state, dispacher] = useReducer (reducer, initialTodos);
+    const [state, dispatch] = useReducer(reducer, initialTodos);
 
     return (
       <>
+      <div style={{margin: "40px"}}>        
         <br />
-        <span>ToDo</span>
+        <Button onClick={
+          () => dispatch({ type: "add" })}>Create Todo</Button>
+        <br />
+        <span>todo id</span> {" "}
         <Button>Delete</Button>
         <Input placeholder="Write something" />
         <Checkbox toggle />
         <br />
+        </div>
+
       </>
     );
 };
