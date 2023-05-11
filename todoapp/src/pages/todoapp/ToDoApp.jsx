@@ -1,17 +1,31 @@
-import { Button, Input, Checkbox } from "semantic-ui-react";
+import { Button, Input, Checkbox, Label } from "semantic-ui-react";
 import { useReducer } from "react";
 
 const initialTodos = [
   {
     id: 1,
-    text: "lean how to communicate",
+    text: "Python",
     completed: true,
     author: "Faby",
-    due: 1 / 5 / 2022
+    due: 1 / 5 / 2022,
   },
   {
     id: 2,
-    text: "road out of hell",
+    text: "Spring Boot",
+    complete: false,
+    author: "Alex",
+    due: 1 / 6 / 2022,
+  },
+  {
+    id: 3,
+    text: "React",
+    complete: false,
+    author: "Alex",
+    due: 1 / 6 / 2022,
+  },
+  {
+    id: 4,
+    text: "Ruby on Rails",
     complete: false,
     author: "Alex",
     due: 1 / 6 / 2022
@@ -20,7 +34,7 @@ const initialTodos = [
 
 function reducer(state, action) {
   switch (action.type) {
-     case "add": {
+    case "add": {
       return [
         ...state,
         {
@@ -28,12 +42,15 @@ function reducer(state, action) {
           text: "",
           author: "",
           due: "",
-          completed: false
-        }
+          completed: false,
+        },
       ];
     }
-    case "blabla": {
-      return;
+    case "delete": {
+      return state.filter((item) => item.id !== action.payload);
+    }
+    case "clear": {
+      return [...initialTodos];
     }
     default: {
       return state;
@@ -46,18 +63,32 @@ export default function ToDoApp(){
 
     return (
       <>
-      <div style={{margin: "40px"}}>        
-        <br />
-        <Button onClick={
-          () => dispatch({ type: "add" })}>Create Todo</Button>
-        <br />
-        <span>todo id</span> {" "}
-        <Button>Delete</Button>
-        <Input placeholder="Write something" />
-        <Checkbox toggle />
-        <br />
+        <div style={{ margin: "40px" }}>
+          <br />
+          <Button onClick={() => dispatch({ type: "add" })}>Create Todo</Button>
+          {"  "}
+          <Button onClick={() => dispatch({ type: "clear" })}>
+            Clear Todo
+          </Button>
+          <br />
+          <br />
         </div>
-
+        <div style={{ margin: "40px" }}>
+          {state.map((item) => (
+            <>
+              <Label round value={item.id}>{item.id}</Label> {"  "}
+              <Button
+                secondary
+                onClick={() => dispatch({ type: "delete", payload: item.id })}
+              >
+                Delete
+              </Button>{" "}
+              <Input placeholder="Write something" value={item.text} /> {"  "}
+              <Checkbox toggle />
+              <br />{" "}
+            </>
+          ))}
+        </div>
       </>
     );
 };
