@@ -76,7 +76,10 @@ export default function ToDoApp(){
         <div style={{ margin: "40px" }}>
           {state.map((item) => (
             <>
-              <Label round value={item.id}>{item.id}</Label> {"  "}
+              <Label round value={item.id}>
+                {item.id}
+              </Label>{" "}
+              {"  "}
               <Button
                 secondary
                 onClick={() => dispatch({ type: "delete", payload: item.id })}
@@ -84,6 +87,7 @@ export default function ToDoApp(){
                 Delete
               </Button>{" "}
               <Input placeholder="Write something" value={item.text} /> {"  "}
+      
               <Checkbox toggle />
               <br />{" "}
             </>
