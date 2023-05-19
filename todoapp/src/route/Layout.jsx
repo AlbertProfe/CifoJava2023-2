@@ -8,8 +8,11 @@ export default function Layout() {
       <nav style={{ backgroundColor: "#A0D0DF", padding: "20px" }}>
         <Link to="/">Home</Link>
         <span>{"  |  "}</span>
-       
-        <Link to="/todoapp">To Do App</Link>
+
+        <Link to="/todoapp">To Do App List</Link>
+        <span>{"  |  "}</span>
+
+        <Link to="/todogrid">To Do App Grid</Link>
         <span>{"  |  "}</span>
       </nav>
 
