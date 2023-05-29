@@ -14,6 +14,9 @@ export default function Layout() {
 
         <Link to="/todogrid">To Do App Grid</Link>
         <span>{"  |  "}</span>
+
+        <Link to="/tododomains">To Do App Domains</Link>
+        <span>{"  |  "}</span>
       </nav>
 
       <Outlet />

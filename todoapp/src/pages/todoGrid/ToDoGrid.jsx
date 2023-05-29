@@ -16,7 +16,7 @@ import { v4 as uuidv4 } from "uuid";
 const ApiContext = React.createContext();
 
 // API_URL mockapi.io
-const API_URL = "https://645fbe78ca2.mockapi.io/v1/";
+const API_URL = "https://645fbe78ca2d89f7e74cf4c9.mockapi.io/v1/";
 
 // Custom Hook to use API Context
 const useApiContext = () => useContext(ApiContext);
@@ -165,17 +165,6 @@ const ToDoGrid = () => {
     }
   };
 
-  /*
-  const addTodo = async (newTodo) => {
-    try {
-      const response = await axios.post('/api/todos', newTodo); 
-      setTodos([...todos, response.data]);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-*/
-
   const addTodo = (newTodo) => {
     fetch(`${API_URL}/todo/`, {
       method: "POST",
@@ -228,7 +217,11 @@ const ToDoGrid = () => {
   return (
     <ApiContext.Provider value={{ todos, addTodo, updateTodo, deleteTodo }}>
       <Container>
+        <br/>
         <h1>Todos</h1>
+        <p>
+          A todo grid/cards with API Rest mockapi.io, with a useSate, semantic and axios.
+        </p>
         <CreateTodo />
 
         <Divider />
@@ -240,3 +233,16 @@ const ToDoGrid = () => {
 };
 
 export default ToDoGrid;
+
+
+
+  /*
+  const addTodo = async (newTodo) => {
+    try {
+      const response = await axios.post('/api/todos', newTodo); 
+      setTodos([...todos, response.data]);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+*/

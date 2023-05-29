@@ -64,6 +64,8 @@ export default function ToDoApp() {
   return (
     <>
       <div style={{ margin: "40px" }}>
+         <h1>Todos List</h1>
+         <p>Just a todo list without API Rest nor local.storage, with a reducer</p>
         <br />
         <Button onClick={() => dispatch({ type: "add" })}>Create Todo</Button>
         {"  "}
